@@ -11,8 +11,8 @@
                 <th>Total</th>
                 <th>Date</th>
                 <th>Items</th>
-                <th>Status</th>
                 <th>Deliveryman</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -38,7 +38,7 @@
                     </td>
                     <td>{{$order->status}}</td>
                     <td>
-                        <a href="#" class="btn btn-default btn-sm">Edit</a>
+                        <a href="{{route('admin.orders.edit', ['id' => $order->id])}}" class="btn btn-default btn-sm">Edit</a>
                     </td>
                 </tr>
             @endforeach
