@@ -20,6 +20,6 @@ class User extends Authenticatable implements Transformable
     ];
 
     public function client(){
-        return $this->hasOne(Client::class, 'id', 'user_id');
+        return $this->hasOne(Client::class);
     }
 }
