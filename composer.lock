@@ -5,7 +5,6 @@
         "This file is @generated automatically"
     ],
     "hash": "6213cdafe903e03fea494bb47546365d",
-    "content-hash": "0a0b0bacf1b3b855af2ca2ea7b0693f6",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -546,16 +545,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "28c3de5e2c6b723492f9e59ed7fb5e9719a00a2b"
+                "reference": "cd99222ea789d74e9a1c85f51bf33bbff4e6fddd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/28c3de5e2c6b723492f9e59ed7fb5e9719a00a2b",
-                "reference": "28c3de5e2c6b723492f9e59ed7fb5e9719a00a2b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/cd99222ea789d74e9a1c85f51bf33bbff4e6fddd",
+                "reference": "cd99222ea789d74e9a1c85f51bf33bbff4e6fddd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.6.0"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
@@ -621,7 +620,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-10-05 21:27:21"
+            "time": "2016-10-10 07:45:55"
         },
         {
             "name": "league/oauth2-server",
@@ -1135,12 +1134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "607ce1d4005af32dd866c4a402459494c168d555"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/607ce1d4005af32dd866c4a402459494c168d555",
-                "reference": "607ce1d4005af32dd866c4a402459494c168d555",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1174,7 +1173,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-25 13:41:54"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
@@ -1254,12 +1253,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "de19df332219d73a2704525ba75aabd7dfaa303b"
+                "reference": "a6d30977565081bc9b177b627bff2e2ba905224c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/de19df332219d73a2704525ba75aabd7dfaa303b",
-                "reference": "de19df332219d73a2704525ba75aabd7dfaa303b",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a6d30977565081bc9b177b627bff2e2ba905224c",
+                "reference": "a6d30977565081bc9b177b627bff2e2ba905224c",
                 "shasum": ""
             },
             "require": {
@@ -1299,7 +1298,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-09-07 22:19:22"
+            "time": "2016-10-09 11:45:02"
         },
         {
             "name": "symfony/console",
@@ -2192,12 +2191,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "57d1666335f24fbf9c60c6f1bb75c8b2dbc17052"
+                "reference": "66e2ffd3ea74f31cae48a9a4e1adfe2a1ff30150"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/57d1666335f24fbf9c60c6f1bb75c8b2dbc17052",
-                "reference": "57d1666335f24fbf9c60c6f1bb75c8b2dbc17052",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/66e2ffd3ea74f31cae48a9a4e1adfe2a1ff30150",
+                "reference": "66e2ffd3ea74f31cae48a9a4e1adfe2a1ff30150",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2233,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-09-20 07:47:47"
+            "time": "2016-10-10 09:10:21"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -3474,12 +3473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "8444f2ac9f86342665cdae47b6d3ea6e07794456"
+                "reference": "1a6cc8d09dd675802ca93de290ac483c10ef95e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/8444f2ac9f86342665cdae47b6d3ea6e07794456",
-                "reference": "8444f2ac9f86342665cdae47b6d3ea6e07794456",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/1a6cc8d09dd675802ca93de290ac483c10ef95e0",
+                "reference": "1a6cc8d09dd675802ca93de290ac483c10ef95e0",
                 "shasum": ""
             },
             "require": {
@@ -3516,7 +3515,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-08-18 09:30:53"
+            "time": "2016-10-10 07:45:47"
         }
     ],
     "aliases": [],
