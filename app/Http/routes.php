@@ -48,38 +48,11 @@ Route::group(['prefix' => 'customer', 'middleware' => 'auth.checkrole:client', '
 Route::group(['prefix' => 'api', 'middleware' => 'oauth', 'as' => 'api.'], function() {
 
     Route::group(['prefix' => 'client', 'middleware' => 'oauth2.checkrole:client', 'as' => 'client.'], function() {
-        Route::get('order', function() {
-            return ['pegando dados'];
-        });
-        Route::post('order', function() {
-            return ['criando dados'];
-        });
-        Route::put('order', function() {
-            return ['atualizando dados inteiros'];
-        });
-        Route::patch('order', function() {
-            return ['atualizando dados parcialmente'];
-        });
-        Route::delete('order', function() {
-            return ['excluindo dados'];
-        });
-
-        Route::get('pedidos', function() {
-            return [
-                'id' => 1,
-                'client' => 'Christian Bayer - Cliente',
-                'total' => 50
-            ];
-        });
+        Route::resource('order', 'API\Client\ClientCheckoutController', ['except' => ['create', 'edit', 'destroy']]);
     });
+
     Route::group(['prefix' => 'deliveryman', 'middleware' => 'oauth2.checkrole:deliveryman', 'as' => 'deliveryman.'], function() {
-        Route::get('pedidos', function() {
-            return [
-                'id' => 1,
-                'client' => 'Christian Bayer - Engregador',
-                'total' => 50
-            ];
-        });
+
     });
 });
 

@@ -3,7 +3,6 @@
 namespace CodeDelivery\Entities;
 
 use CodeDelivery\Models\OrderItem;
-use CodeDelivery\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
@@ -21,6 +20,10 @@ class Order extends Model implements Transformable
 
     public function client() {
         return $this->belongsTo(Client::class);
+    }
+
+    public function cupom() {
+        return $this->belongsTo(Cupom::class);
     }
 
     public function items(){
