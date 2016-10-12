@@ -1,11 +1,10 @@
 <?php
 namespace CodeDelivery\Services;
 
-use CodeDelivery\Repositories\ClientRepository;
+use CodeDelivery\Entities\Order;
 use CodeDelivery\Repositories\CupomRepository;
 use CodeDelivery\Repositories\OrderRepository;
 use CodeDelivery\Repositories\ProductRepository;
-use CodeDelivery\Repositories\UserRepository;
 use Exception;
 use Illuminate\Support\Facades\DB;
 
@@ -57,8 +56,20 @@ class OrderService
             return $order;
         } catch (Exception $e){
             DB::rollback();
+            throw $e;
         }
 
+    }
+
+    public function updateStatus($id, $deliveryman, $status){
+        $order = $this->orderRepository->getByIdAndDeliveryman($id, $deliveryman);
+        if($order instanceof Order){
+            $order->status = $status;
+            $order->save();
+            return $order;
+        } else {
+            return false;
+        }
     }
 
 }

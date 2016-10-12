@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14f7976e-4982-46ad-ac77-4421bf734fc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Client/ClientCheckoutController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Deliveryman/DeliverymanCheckoutController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/Order.php" afterPath="$PROJECT_DIR$/app/Entities/Order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Order.php" afterPath="$PROJECT_DIR$/app/Models/Order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/OrderItemRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/OrderItemRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/OrderService.php" afterPath="$PROJECT_DIR$/app/Services/OrderService.php" />
     </list>
     <ignored path="laravel-codedelivery.iws" />
@@ -19,6 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -31,24 +33,31 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="51" selection-end-column="7" />
+            <state relative-caret-position="379">
+              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Services/OrderService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <marker date="1476212755585" expanded="true" signature="3000:3222" ph="..." />
-                <marker date="1476212755585" expanded="true" signature="3098:3221" ph="..." />
+                <element signature="e#40#72#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientCheckoutController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/Client/ClientCheckoutController.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#59#104#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,52 +65,42 @@
       <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <marker date="1476214735259" expanded="true" signature="497:549" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="402">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderItem.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/OrderItem.php">
+      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Entities/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OAuth2CheckRole.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/OAuth2CheckRole.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="108">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
-                <element signature="e#48#60#0#PHP" expanded="true" />
+                <element signature="e#41#75#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <file leaf-file-name="OrderRepositoryEloquent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+            <state relative-caret-position="360">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding>
+                <element signature="e#45#77#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeliverymanCheckoutController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/Deliveryman/DeliverymanCheckoutController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -115,13 +114,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/clients/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientsController.php" />
-        <option value="$PROJECT_DIR$/app/Services/ClientService.php" />
         <option value="$PROJECT_DIR$/database/seeds/OrderTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_06_202154_create_orders_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AdminClientRequest.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/orders/edit.blade.php" />
@@ -161,11 +156,15 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/OAuth2CheckRole.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Services/OrderService.php" />
         <option value="$PROJECT_DIR$/app/Models/Order.php" />
         <option value="$PROJECT_DIR$/app/Entities/Order.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/Client/ClientCheckoutController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/OrderItemRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/Deliveryman/DeliverymanCheckoutController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Services/OrderService.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -187,8 +186,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1364" />
-    <option name="height" value="731" />
+    <option name="x" value="47" />
+    <option name="y" value="24" />
+    <option name="width" value="1319" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -215,46 +216,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -268,11 +254,29 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-codedelivery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -282,11 +286,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -300,11 +304,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -318,11 +322,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -340,11 +344,41 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
+              <option name="myItemId" value="laravel-codedelivery" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deliveryman" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-codedelivery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-codedelivery" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -368,26 +402,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CodeDelivery" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -397,25 +414,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="kern&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/Kernel.php&#10;chec&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/Middleware/CheckRole.php&#10;routes&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/routes.php&#10;.env&#9;FILE&#9;file:///var/www/CodeDelivery/.env&#10;oauth2&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/config/oauth2.php&#10;kernel&#9;null&#9;null&#10;kernel.p&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Console/Kernel.php&#10;app.php&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/config/app.php&#10;checkrol&#9;null&#9;null&#10;ap&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;rout&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;route&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;usertables&#9;null&#9;null&#10;app&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;product&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;5c574300a290aaa&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/storage/framework/views/e72b75c574300a290aaa27aee584f6e7717d333b.php&#10;productRe&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;/app&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Entities/Order.php&#10;order&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Models/Order.php&#10;userre&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/UserRepositoryEloquent.php&#10;orderrepo&#9;null&#9;null&#10;userreposi&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/UserRepositoryEloquent.php&#10;Order&#9;null&#9;null&#10;Client&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Models/Client.php&#10;orders/inde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/orders/index.blade.php&#10;rou&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;clientserv&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;routes.&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;productscon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;tableseeder&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/database/seeds/UserTableSeeder.php&#10;createuser&#9;null&#9;null&#10;create&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/orders/index.blade.php&#10;clientser7&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;clientcon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ClientsController.php&#10;clientser&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;request&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Requests/AdminClientRequest.php&#10;clientscon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ClientsController.php&#10;produ&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;categoriescon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/CategoriesController.php&#10;_for&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/products/_form.blade.php&#10;productcontro&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;producre&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;nde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/products/index.blade.php&#10;produc&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Entities/Product.php&#10;app.bla&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/app.blade.php&#10;admin&#9;null&#9;null&#10;composer.&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/composer.json&#10;routes.php&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="order&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Models/Order.php&#10;Order&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Entities/Order.php&#10;routes.php&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;orderrepo&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/OrderItemRepository.php&#10;ORDERREPOSITORYEL&#9;null&#9;null&#10;kern&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/Kernel.php&#10;chec&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/Middleware/CheckRole.php&#10;routes&#9;FILE&#9;file:///var/www/CodeDelivery/app/Http/routes.php&#10;.env&#9;FILE&#9;file:///var/www/CodeDelivery/.env&#10;oauth2&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/config/oauth2.php&#10;kernel&#9;null&#9;null&#10;kernel.p&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Console/Kernel.php&#10;app.php&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/config/app.php&#10;checkrol&#9;null&#9;null&#10;ap&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;rout&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;route&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;usertables&#9;null&#9;null&#10;app&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;product&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;5c574300a290aaa&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/storage/framework/views/e72b75c574300a290aaa27aee584f6e7717d333b.php&#10;productRe&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;/app&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/layouts/app.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Entities/Order.php&#10;userre&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/UserRepositoryEloquent.php&#10;userreposi&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/UserRepositoryEloquent.php&#10;Client&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Models/Client.php&#10;orders/inde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/orders/index.blade.php&#10;rou&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;clientserv&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;routes.&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/routes.php&#10;productscon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;tableseeder&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/database/seeds/UserTableSeeder.php&#10;createuser&#9;null&#9;null&#10;create&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/orders/index.blade.php&#10;clientser7&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;clientcon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ClientsController.php&#10;clientser&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Services/ClientService.php&#10;request&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Requests/AdminClientRequest.php&#10;clientscon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ClientsController.php&#10;produ&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;categoriescon&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/CategoriesController.php&#10;_for&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/products/_form.blade.php&#10;productcontro&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Http/Controllers/ProductsController.php&#10;producre&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Repositories/ProductRepositoryEloquent.php&#10;nde&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/admin/products/index.blade.php&#10;produc&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/app/Entities/Product.php&#10;app.bla&#9;FILE&#9;file:///var/www/html/laravel-codedelivery/resources/views/app.blade.php&#10;admin&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API/Deliveryman" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API/Client" />
       <recent name="$PROJECT_DIR$/app/Http/Middleware" />
       <recent name="$PROJECT_DIR$/app/Services" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Models" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.Serve">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -443,19 +457,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="false" name="Serve" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="serve">
@@ -500,36 +501,37 @@
       <workItem from="1476118875373" duration="6345000" />
       <workItem from="1476185780975" duration="277000" />
       <workItem from="1476211096232" duration="4397000" />
+      <workItem from="1476237832142" duration="5541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75346000" />
+    <option name="totallyTimeSpent" value="80887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1364" height="731" extended-state="4" />
-    <editor active="false" />
+    <frame x="47" y="24" width="1319" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24733637" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2513747" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271605" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271605" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -548,27 +550,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Cupom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="6" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/CupomRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/ClientRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -598,13 +579,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Entities/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/OrderItemRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -796,62 +770,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/OAuth2CheckRole.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TesteController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/Client/ClientCheckoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/OAuth2CheckRole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="352">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="e#48#60#0#PHP" expanded="true" />
+            <element signature="e#59#104#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/OrderService.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/OrderItemRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="216">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TesteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="51" selection-end-column="7" />
-          <folding>
-            <marker date="1476212755585" expanded="true" signature="3000:3222" ph="..." />
-            <marker date="1476212755585" expanded="true" signature="3098:3221" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#75#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,31 +801,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding>
-            <marker date="1476214735259" expanded="true" signature="497:549" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/OrderItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="108">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/Client/ClientCheckoutController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/Deliveryman/DeliverymanCheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
-            <element signature="e#59#104#0#PHP" expanded="true" />
+            <element signature="e#45#77#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#41#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/OrderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

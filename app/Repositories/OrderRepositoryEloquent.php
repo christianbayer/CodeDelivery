@@ -2,11 +2,10 @@
 
 namespace CodeDelivery\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use CodeDelivery\Repositories\OrderRepository;
 use CodeDelivery\Entities\Order;
-use CodeDelivery\Validators\OrderValidator;
+use Illuminate\Support\Collection;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class OrderRepositoryEloquent
@@ -14,6 +13,14 @@ use CodeDelivery\Validators\OrderValidator;
  */
 class OrderRepositoryEloquent extends BaseRepository implements OrderRepository
 {
+
+    public function getByIdAndDeliveryman($id, $deliveryman)
+    {
+        $result = $this->with(['client', 'items.product', 'cupom'])->findWhere(['id' => $id, 'user_deliveryman_id' => $deliveryman])->first();
+
+        return $result;
+    }
+
     /**
      * Specify Model class name
      *
