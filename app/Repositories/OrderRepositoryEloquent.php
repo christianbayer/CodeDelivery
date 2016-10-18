@@ -6,6 +6,7 @@ use CodeDelivery\Entities\Order;
 use Illuminate\Support\Collection;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Prettus\Repository\Eloquent\BaseRepository;
+use Prettus\Repository\Presenter\ModelFractalPresenter;
 
 /**
  * Class OrderRepositoryEloquent
@@ -37,5 +38,10 @@ class OrderRepositoryEloquent extends BaseRepository implements OrderRepository
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+    public function presenter()
+    {
+        return ModelFractalPresenter::class;
     }
 }
