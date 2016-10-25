@@ -2,7 +2,6 @@
 
 namespace CodeDelivery\Entities;
 
-use CodeDelivery\Models\OrderItem;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
@@ -15,7 +14,8 @@ class Order extends Model implements Transformable
         'client_id',
         'user_deliveryman_id',
         'total',
-        'status'
+        'status',
+        'cupom_id',
     ];
 
     public function transform()

@@ -7,8 +7,6 @@ use CodeDelivery\Repositories\OrderRepository;
 use CodeDelivery\Repositories\ProductRepository;
 use CodeDelivery\Repositories\UserRepository;
 use CodeDelivery\Services\OrderService;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 class ClientCheckoutController extends Controller
@@ -17,6 +15,7 @@ class ClientCheckoutController extends Controller
     private $userRepository;
     private $productRepository;
     private $orderService;
+    private $with = ['client', 'cupom', 'items'];
 
     public function __construct(OrderRepository $orderRepository, UserRepository $userRepository, ProductRepository $productRepository, OrderService $orderService)
     {
@@ -29,7 +28,7 @@ class ClientCheckoutController extends Controller
     public function index()
     {
         $clientId = $this->userRepository->find(Authorizer::getResourceOwnerId())->client->id;
-        $orders = $this->orderRepository->with(['items'])->scopeQuery(function ($query) use ($clientId) {
+        $orders = $this->orderRepository->skipPresenter(false)->with($this->with)->scopeQuery(function ($query) use ($clientId) {
             return $query->where('client_id', '=', $clientId);
         })->paginate();
 
@@ -43,11 +42,11 @@ class ClientCheckoutController extends Controller
         $data['client_id'] = $clientId;
         $order = $this->orderService->create($data);
 
-        return $this->orderRepository->with(['items'])->find($order->id);
+        return $this->orderRepository->skipPresenter(false)->with($this->with)->find($order->id);
     }
 
     public function show($id)
     {
-        return $this->orderRepository->with(['client', 'items.product', 'cupom'])->find($id);
+        return $this->orderRepository->skipPresenter(false)->with($this->with)->find($id);
     }
 }
