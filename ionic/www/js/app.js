@@ -23,21 +23,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'angular-oauth2'])
         });
     })
 
-    .config(function ($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('home', {
-            url: '/home/:name',
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
-        }).state('home.a', {
-            url: '/a',
-            templateUrl: 'templates/home-a.html'
-        }).state('home.b', {
-            url: '/b',
-            templateUrl: 'templates/home-b.html'
-        }).state('main', {
-            url: '/',
-            templateUrl: 'templates/main.html'
+    .config(function ($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider) {
+
+        OAuthProvider.configure({
+            baseUrl: 'http://localhost:8000',
+            clientId: 'appid01',
+            clientSecret: 'secret', // optional
+            grantPath: '/oauth/access_token'
         });
 
-        $urlRouterProvider.otherwise('/');
+        OAuthTokenProvider.configure({
+            name: 'token',
+            options: {
+                secure: false // 0 = http, 1 = https
+            }
+        });
+
+        $stateProvider
+            .state('login', {
+                url: '/login',
+                templateUrl: 'templates/login.html',
+                controller: 'LoginCtrl'
+            }).state('home', {
+                url: '/home',
+                templateUrl: 'templates/home.html',
+                controller: function($scope){}
+            });
+
+        // $urlRouterProvider.otherwise('/');
     });
