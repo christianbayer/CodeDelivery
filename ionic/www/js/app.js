@@ -79,4 +79,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             });
 
         // $urlRouterProvider.otherwise('/');
+    })
+    .service('cart', function(){
+        this.items = [];
     });
