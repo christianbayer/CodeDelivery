@@ -1,7 +1,5 @@
 angular.module('starter.controllers')
-    .controller('ClientViewProductCtrl', ['$scope', '$state', 'Product', '$ionicLoading', 'cart', '$localStorage', function ($scope, $state, Product, $ionicLoading, cart, $localStorage) {
-
-        $localStorage.setObject('cart', {name: 'teste', value: '1020'});
+    .controller('ClientViewProductsCtrl', ['$scope', '$state', 'Product', '$ionicLoading', '$cart', function ($scope, $state, Product, $ionicLoading, $cart) {
 
         $scope.products = [];
         $ionicLoading.show({
@@ -15,7 +13,8 @@ angular.module('starter.controllers')
         });
 
         $scope.addItem = function(item) {
-            cart.items.push(item);
+            item.qtd = 1;
+            $cart.addItem(item);
             $state.go('client.checkout')
         };
 

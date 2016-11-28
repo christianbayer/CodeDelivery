@@ -13,7 +13,6 @@ angular.module('starter.services')
                 return this.getObject(key)
             },
             getObject: function(key){
-                console.log(key);
                 return JSON.parse($window.localStorage[key] || null);
             }
         }

@@ -63,19 +63,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 template: '<ui-view/>'
             })
             .state('client.checkout',{
+                cache: false,
                 url: '/checkout',
                 templateUrl: 'templates/client/checkout.html',
                 controller: 'ClientCheckoutCtrl'
             })
             .state('client.checkout_item_detail',{
                 url: '/checkout/detail/:index',
-                templateUrl: 'templates/client/checkout-detail.html',
+                templateUrl: 'templates/client/checkout-item-detail.html',
                 controller: 'ClientCheckoutDetailCtrl'
             })
+            .state('client.checkout_successful', {
+                url: '/checkout/successful',
+                templateUrl: 'templates/client/checkout_successful.html',
+                controller: 'ClientCheckoutSuccessfulCtrl'
+            })
             .state('client.view_products',{
-                url: '/view_product',
-                templateUrl: 'templates/client/view-product.html',
-                controller: 'ClientViewProductCtrl'
+                url: '/view_products',
+                templateUrl: 'templates/client/view-products.html',
+                controller: 'ClientViewProductsCtrl'
             });
 
         // $urlRouterProvider.otherwise('/');

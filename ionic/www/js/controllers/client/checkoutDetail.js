@@ -1,20 +1,9 @@
 angular.module('starter.controllers')
-    .controller('ClientCheckoutDetailCtrl', ['$scope', 'OAuth', '$ionicPopup', '$state', function ($scope, OAuth, $ionicPopup, $state) {
+    .controller('ClientCheckoutDetailCtrl', ['$scope', '$state', '$stateParams', '$cart', function ($scope, $state, $stateParams, $cart) {
 
-        $scope.user = {
-            username: '',
-            password: ''
-        };
-
-        $scope.login = function () {
-            OAuth.getAccessToken($scope.user).then(function (data) {
-                $state.go('home');
-            }, function (responseError) {
-                $ionicPopup.alert({
-                    title: 'Error',
-                    template: 'Invalid Username or Password!'
-                });
-                console.log('erro no login')
-            });
+        $scope.product = $cart.getItem($stateParams.index);
+        $scope.updateQtd = function () {
+            $cart.updateQtd($stateParams.index, $scope.product.qtd);
+            $state.go('client.checkout');
         }
     }]);
